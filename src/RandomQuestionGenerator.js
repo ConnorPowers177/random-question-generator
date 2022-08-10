@@ -51,12 +51,12 @@ export const RandomQuestionGenerator = () => {
 	}, [])
 
 	return (
-		<div>
-			<div>
-				<h1 >{ fbQuestions?.[randIdx]?.title ?? ''  } </h1>
+		<div className='text-center items-center mx-auto' >
+			<div className='bg-amber-900 lg:mb-4 mb-2 lg:w-48 lg:h-24 w-36 h-16 mx-auto shadow-xl ' >
+				<h1 className='text-tiny text-slate-50' >{ fbQuestions?.[randIdx]?.title ?? ''  } </h1>
 			</div>
-			<textarea id='answer' defaultValue={answer} onChange={event => setAnswer(event.target.value)} autoComplete='false'></textarea>
-			<button onClick={setRandomIdx}>New Question</button>
+			<textarea id='answer' defaultValue={answer} onChange={event => setAnswer(event.target.value)} autoComplete='false' className='flex mx-auto lg:w-64 lg:h-32 w-48 h-24 text-tiny rounded-lg border-none border-transparent focus:border-transparent focus:ring-0 focus:ring-transparent outline-none border-transparent focus:ring-0 focus:ring-transparent border border-sky-500 shadow-xl' ></textarea>
+			<button onClick={setRandomIdx} className='flex mt-2 mx-auto px-1 py-0.25 lg:px-4 lg:py-1 border-none lg:text-lg rounded-full text-center text-slate-50 transition ease-in-out delay-150 bg-sky-600 hover:bg-sky-500 duration-300 shadow-xl' >New Question</button>
 		</div>
 	)
 }
